@@ -14,6 +14,7 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 100px;
 }
 
 .logo {
@@ -103,6 +104,44 @@ body {
   background: #0056EC;
 }
 
-p {
-  font-family: Roboto;
+.main {
+  padding: 0 63% 100px 0;
+  background: top right no-repeat url(IMG/img.svg);
+}
+
+.main__title {
+  margin: 0 0 40px 0;
+  font: bold 50px/66px pt_serif, arial, helvetica, sans-serif;
+}
+
+.main-title-text_highlight {
+  background: #ECF3FF;
+}
+
+.main__description {
+  margin: 0 0 40px 0;
+  font: 18px/21px  Roboto, arial, helvetica, sans-serif;
+}
+
+.main__button {
+  display: inline-block;
+  font: 14px/16px  Roboto, arial, helvetica, sans-serif;
+  color: #fff;
+  background:  #0056EC;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: opacity .5s;
+  animation: flash 3s infinite ease-in-out reverse;
+}
+
+.main__button:hover: {
+  opacity: .5s;
+}
+
+
+@keyframes flash {
+  to {
+    color: red;
+  }
 }
