@@ -89,7 +89,8 @@ body {
   opacity: .5;
 }
 
-.menu__item:hover::after, .menu__item_active::after {
+.menu__item:hover::after, 
+.menu__item_active::after {
   opacity: 1;
   width: 100%;
 }
@@ -106,7 +107,7 @@ body {
 
 .main {
   padding: 0 63% 100px 0;
-  background: top right no-repeat url(img/mainimg.svg);
+  background: top right no-repeat url(IMG/mainimg.svg);
 }
 
 .main__title {
