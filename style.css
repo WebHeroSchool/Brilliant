@@ -1,5 +1,5 @@
 body {
-	margin: 0;
+  margin: 0;
 }
 
 .wrapper {
@@ -8,55 +8,140 @@ body {
  }
 
  .logo, .menu {
- 	display: inline-block;
+  display: inline-block;
 }
 
 .header {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
 }
 
 .logo {
-	position: relative;
-	padding: 40px 0;
-	padding-left: 44px;
-	font: bold 24px/31px pt_serif, arial, helvetica, sans-serif;
+  position: relative;
+  padding: 40px 0;
+  padding-left: 44px;
+  font: bold 24px/31px pt_serif, arial, helvetica, sans-serif;
 }
 
 .logo__circle {
-	position: absolute;
-	left: 0;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 28px;
-	height: 28px;
-	border-radius: 50%;
-	opacity: .7;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  opacity: .7;
 }
 
 .logo__circle_color_blue {
-	left: 8px;
-	top: 56%;
-	background: #C8DBFB;
+  left: 8px;
+  top: 56%;
+  background: #C8DBFB;
 }
 
 .logo__circle_color_dark-blue {
-	background: #0056EC;
+  background: #0056EC;
 }
 
 .menu {
-	display: flex;
-	align-items: center; 
+  display: flex;
+  align-items: center; 
 }
 
 .menu__item {
-	padding: 0 13px;
+  position: relative;
+  margin-right: 26px;
+  font: 500 18px/21px  Roboto, arial, helvetica, sans-serif;
+  color: #000;
+  text-decoration: none;
+  transition: opacity .5s;
 }
 
 .menu__item:last-child {
-    padding-right: 0;
+  margin-right: 0;
 }
 
-p {
-	font-family: Roboto;
+.menu__item_active::after {
+  position: absolute;
+  display: block;
+  content: '';
+  left: 0;
+  width: 68px;
+  height: 3px;
+  background: #0056EC;
+}
+
+.menu__item::after {
+  position: absolute;
+  left: 0;
+  display: block;
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #0056EC;
+  opacity: 0;
+  transition: opacity .5s, width .5s;
+}
+
+.menu__item:hover {
+  opacity: .5;
+}
+
+.menu__item:hover::after,
+.menu__item_active::after {
+  opacity: 1;
+  width: 100%;
+}
+
+.menu__item:hover::after {
+  position: absolute;
+  left: 0;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: #0056EC;
+}
+
+.main {
+  padding: 0 63% 100px 0;
+  background: top right no-repeat url(IMG/mainimg.svg);
+}
+
+.main__title {
+  margin: 0 0 40px 0;
+  font: bold 50px/66px pt_serif, arial, helvetica, sans-serif;
+}
+
+.main-title-text_highlight {
+  background: #ecf3ff;
+}
+
+.main__description {
+  margin: 0 0 40px 0;
+  font: 18px/21px  Roboto, arial, helvetica, sans-serif;
+}
+
+.main__button {
+  display: inline-block;
+  font: 14px/16px  Roboto, arial, helvetica, sans-serif;
+  color: #fff;
+  background: #0056EC;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: opacity .5s;
+  animation: flash 3s infinite ease-in-out reverse;
+}
+
+.main__button:hover: {
+  opacity: .5s;
+}
+
+@keyframes flash {
+  to {
+    color: red;
+  }
 }
